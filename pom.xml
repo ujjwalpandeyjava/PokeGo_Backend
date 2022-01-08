@@ -15,7 +15,8 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api (to remove jsp's initial error)-->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api 
+			(to remove jsp's initial error) -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -25,7 +26,7 @@
 
 	</dependencies>
 	<build>
-	<!-- Add this plugin to remove the pom.xml WebappStructureSerializer error -->
+		<!-- Add this plugin to remove the pom.xml WebappStructureSerializer error -->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
