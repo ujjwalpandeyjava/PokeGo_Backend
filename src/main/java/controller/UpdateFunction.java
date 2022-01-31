@@ -59,7 +59,7 @@ public class UpdateFunction {
 				HttpResponse<String> response = HttpClient.newHttpClient().send(request,
 						HttpResponse.BodyHandlers.ofString());
 				// Creating JSON doc using a Java program
-				JSONObject jsonObject = new JSONObject();
+				final JSONObject jsonObject = new JSONObject();
 // Insert the required key-value pairs using the put() method of the JSONObject class
 				// Iterator this object on is values and insert them in jsonObject which will be
 				// used to put data in files.
@@ -74,7 +74,7 @@ public class UpdateFunction {
 									+ "Not handling now.");
 //						Object currentObj = jsonData.get(s);
 							// Handle the data and put each object in an array
-							JSONArray newJSONArrayObj = new JSONArray();
+							// JSONArray newJSONArrayObj = new JSONArray();
 //						jsonObject.put(s, newJSONArrayObj);
 						} else if (jsonData.get(s) instanceof JSONObject) {
 							System.out.println("\nKey is: - " + s + ", data is JSONObject------- " + s.toString());

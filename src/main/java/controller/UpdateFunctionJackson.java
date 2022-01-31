@@ -1,7 +1,6 @@
 package controller;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -10,9 +9,7 @@ import java.net.http.HttpResponse;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.Properties;
 
 import com.fasterxml.jackson.core.util.DefaultPrettyPrinter;
@@ -25,8 +22,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 public class UpdateFunctionJackson {
 
 	// This method is called inside the UpdateNewJSONData class.
-	// Write logic here to update JSON data
-	@SuppressWarnings("unchecked")
+	// @SuppressWarnings("unchecked")
 	public static String fetchNewData() {
 		long startTime = System.currentTimeMillis();
 		String returnString = "";
@@ -113,10 +109,7 @@ public class UpdateFunctionJackson {
 					else if (childAbstractNode1 instanceof ArrayNode)
 						System.out.println("This is JSON Array type");
 					*/
-					
-					
-					
-					
+				
 					JsonNode responseNode = mapper.readTree(response.body().toString());
 					JsonNode rootNode = null ;
 					if (responseNode instanceof ObjectNode) {
@@ -125,7 +118,6 @@ public class UpdateFunctionJackson {
 						Iterator<String> keySets = responseNode.fieldNames();
 						while(keySets.hasNext()) {
 							String currentKey = keySets.next();
-							
 //						}
 //						keySets.forEachRemaining(currentKey -> {
 							JsonNode tempJsonNode = responseNode.get(currentKey);
@@ -149,7 +141,6 @@ public class UpdateFunctionJackson {
 						ObjectNode childObjNode2 = mapper.createObjectNode();
 						childObjNode2.put("key 2", "val 2");
 						rootNodeTemp.set("Full response body 2", childObjNode2);*/
-						
 						rootNode = rootNodeTemp;
 					}
 					else if (responseNode instanceof ArrayNode) {
@@ -168,7 +159,6 @@ public class UpdateFunctionJackson {
 //						rootNodeTemp.add(childObjNode2);
 						rootNode = rootNodeTemp;
 					}
-					
 					String jsonString = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(rootNode);
 //				    mapper.writeValue(Paths.get(dirJson + "/" + fileData.name().toString() + ".json").toFile(), mapper.readTree(jsonString));
 					writer.writeValue(Paths.get(dirJson + "/" + fileData.name().toString() + ".json").toFile(),
@@ -184,7 +174,6 @@ public class UpdateFunctionJackson {
 				Thread.sleep(2000);
 				System.out.println("Thread execution resumed\n||---------------------------------------------------||");
 			}
-
 		} catch (Exception e) {
 			e.fillInStackTrace();
 			e.printStackTrace();
@@ -194,13 +183,4 @@ public class UpdateFunctionJackson {
 		System.out.println((endTime-startTime)/1000 +" Seconds");
 		return returnString;
 	}
-	protected static void addObjectInArray() {
-		
-		
-	}
-	protected static void setObjectInObject() {
-		
-		
-	}
-
 }

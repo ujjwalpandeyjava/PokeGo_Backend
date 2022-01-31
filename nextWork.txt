@@ -1,0 +1,4 @@
+1. Decide which endpoints are must 
+	1. 
+	2. 
+2. Decide basic endpoints (will work on specific data form that later.)
