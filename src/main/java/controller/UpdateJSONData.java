@@ -2,7 +2,7 @@ package controller;
 
 import java.util.Scanner;
 
-public class UpdateNewJSONData {
+public class UpdateJSONData {
 
 	// Change this main to a method after successful development
 	public static void main(String[] args) {
@@ -16,18 +16,11 @@ public class UpdateNewJSONData {
 	}
 
 	static String whichFunctionToUse() {
-
-		return UpdateFunctionJackson.fetchNewData();
-		
-		/*System.out.print("Use \n1). JSON-Simple\n2). JackSon (default) \nEnter 1 or 2: - ");
+		System.out.print("Use \n1). JSON-Simple\n2). JackSon (default) \nEnter 1 or 2: - ");
 		Scanner scan = new Scanner(System.in);
-		String whichFunctionTouse = scan.next();
-		if (whichFunctionTouse.equalsIgnoreCase("1")) {
-			scan.close();
-			return UpdateFunction.fetchNewData();
-		} else {
-			scan.close();
-			return UpdateFunctionJackson.fetchNewData();
-		}*/
+		String whichFunctionTouse = scan.next().toUpperCase();
+		scan.close();
+		return (whichFunctionTouse == "1") ? UpdateFunc_JSONSimple.fetchNewData() : UpdateFunc_Jackson.fetchNewData();
 	}
+	
 }

@@ -15,7 +15,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class UpdateFunction {
+public class UpdateFunc_JSONSimple {
 	// This method is called inside the UpdateNewJSONData class.
 	// Write logic here to update JSON data
 	@SuppressWarnings("unchecked")

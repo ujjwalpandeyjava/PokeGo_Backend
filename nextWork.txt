@@ -1,4 +1,34 @@
 1. Decide which endpoints are must 
 	1. 
 	2. 
-2. Decide basic endpoints (will work on specific data form that later.)
+2. Decide basic endpoints   --> work_with(will work on specific data form that later.)
+
+
+
+
+>> Use it 
+https://docs.github.com/en/actions/security-guides/encrypted-secrets
+
+// My New APIs 
+	type_effectiveness  --> work_with("githubURL/type_effectiveness"),
+	pokemon_rarity  --> work_with("githubURL//pokemon_rarity"),
+	pokemon_powerup_requirements  --> work_with("githubURL/pokemon_powerup_requirements"),
+	pokemon_genders  --> work_with("githubURL/pokemon_genders"),
+	current_pokemon_moves  --> work_with("githubURL/current_pokemon_moves"),
+	pokemon_evolutions  --> work_with("githubURL/pokemon_evolutions"),
+	raid_exclusive_pokemon  --> work_with("githubURL/raid_exclusive_pokemon"),
+	pokemon_buddy_distances  --> work_with("githubURL/pokemon_buddy_distances"),
+	pokemon_candy_to_evolve  --> work_with("githubURL/pokemon_candy_to_evolve"),
+	pokemon_stats  --> work_with("githubURL/pokemon_stats"),
+	nesting_pokemon  --> work_with("githubURL/nesting_pokemon"),
+	pokemon_max_cp  --> work_with("githubURL/pokemon_max_cp"),
+	shiny_pokemon  --> work_with("githubURL/shiny_pokemon"),
+	alolan_pokemon  --> work_with("githubURL/alolan_pokemon"),
+	fast_moves  --> work_with("githubURL/fast_moves"),
+	pokemon_names  --> work_with("githubURL/pokemon_names"),
+	charged_moves  --> work_with("githubURL/charged_moves"),
+	released_pokemon  --> work_with("githubURL/released_pokemon"),
+	weather_boosts  --> work_with("githubURL/weather_boosts"),
+	possible_ditto_pokemon  --> work_with("githubURL/possible_ditto_pokemon"),
+	pokemon_types  --> work_with("githubURL/pokemon_types"),
+	pokemon_encounter_data  --> work_with("githubURL/pokemon_encounter_data");

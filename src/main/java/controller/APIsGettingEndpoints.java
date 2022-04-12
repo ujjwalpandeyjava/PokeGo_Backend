@@ -1,9 +1,7 @@
 package controller;
-// Don't use auto formatter
+// 	Don't use auto formatter
 //	endpointName(rapidApiURL)
 public enum APIsGettingEndpoints {
-	/* these are fine
-	 */	
 	type_effectiveness("https://pokemon-go1.p.rapidapi.com/type_effectiveness.json"),
 	pokemon_rarity("https://pokemon-go1.p.rapidapi.com/pokemon_rarity.json"),
 	pokemon_powerup_requirements("https://pokemon-go1.p.rapidapi.com/pokemon_powerup_requirements.json"),
@@ -41,8 +39,8 @@ public enum APIsGettingEndpoints {
 }
 
 
-/* 	Java (java.net.http)
- 	How to call api to update our own java json data
+/* 	Java (java.net.http) (Server-side)
+ 	How to call APIs to update our own java JSON data
  	HttpRequest request = HttpRequest.newBuilder()
 		.uri(URI.create("https://pokemon-go1.p.rapidapi.com/type_effectiveness.json"))
 		.header("x-rapidapi-host", "pokemon-go1.p.rapidapi.com")
@@ -51,15 +49,12 @@ public enum APIsGettingEndpoints {
 		.build();
 			HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 			System.out.println(response.body());
-
  */
 
-/*	Use this code to get the data from custom my api 
+/*	Use this code to get the data from custom my API (Client-side)
  
   	axios.request(options).then(function (response) {
 		console.log(response.data);
 	}).catch(function (error) {
 		console.error(error);
-	});
-
-*/
+	});		*/

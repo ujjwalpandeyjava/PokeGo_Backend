@@ -19,7 +19,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-public class UpdateFunctionJackson {
+public class UpdateFunc_Jackson {
 
 	// This method is called inside the UpdateNewJSONData class.
 	// @SuppressWarnings("unchecked")
